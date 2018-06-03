@@ -7,4 +7,8 @@ public class StartConfig : ScriptableObject {
 
     public Vector3 startPositionPlayer;
     public float score;
+    public float speedMoving;
+    public float speedRotation;
+    public float time;
+    public float timeToDestroy;
 }

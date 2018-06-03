@@ -5,28 +5,32 @@ using UnityEngine;
 public class GenerateMeteor : MonoBehaviour {
 
     public GameObject meteor;
+    public StartConfig config;
+
+    public bool generate;
 
     public float time;
     private float timer;
 
-    void Start() {
-        timer = getTime();
+    private void Start()
+    {
+        time = config.time;
+        timer = time;
     }
 
     void Update() {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        if (generate)
         {
-            meteor.transform.position = new Vector3(randomRadius(15, 6), randomRadius(15, 6), randomRadius(15, 6));
-            Instantiate(meteor);
-            timer = getTime();
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                meteor.transform.position = new Vector3(randomRadius(15, 6), randomRadius(15, 6), randomRadius(15, 6));
+                Instantiate(meteor);
+                timer = time;
+            }
         }
     }
 
-    float getTime()
-    {
-        return time;
-    }
 
     float randomRadius(float radiusOfGenerate, float excludingRadius)
     {
@@ -38,5 +42,10 @@ public class GenerateMeteor : MonoBehaviour {
                 result += excludingRadius;
         }
         return result;
+    }
+
+    public bool getGenerate()
+    {
+        return generate;
     }
 }

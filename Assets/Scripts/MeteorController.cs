@@ -5,12 +5,14 @@ using UnityEngine;
 public class MeteorController : MonoBehaviour {
 
     public float time;
+    public StartConfig config;
 
     private float timer;
     public bool destroy;
 
 	// Use this for initialization
 	void Start () {
+        time = config.timeToDestroy;
         timer = time;
 	}
 	
