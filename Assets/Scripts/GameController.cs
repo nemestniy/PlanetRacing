@@ -83,9 +83,12 @@ public class GameController : MonoBehaviour {
 
     public void changeRecord()
     {
-        PlayerPrefs.SetInt("Record", counter);
-        record.text = "Record: " + counter;
-        counter = 0;
+        if (counter > PlayerPrefs.GetInt("Record"))
+        {
+            PlayerPrefs.SetInt("Record", counter);
+            record.text = "Record: " + counter;
+            counter = 0;
+        }
     }
     public void showRecord()
     {
