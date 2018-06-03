@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour {
             gameIsStopped.enabled = false;
             showRecord();
             startStop.text = "Stop";
+            counter = 0;
         }
     }
 
