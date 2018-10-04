@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour {
     public float speedRotation = 0;
     public bool accelerating = false;
 
-    private bool touched = false;
+    private bool isGaming;
 
     public Text gameIsStopped;
     public Text startStop;
@@ -19,6 +19,18 @@ public class UIController : MonoBehaviour {
     private void OnValidate()
     {
         gameController = GetComponent<GameController>();
+        gameController.StarGame += GameController_StarGame;
+        gameController.StopGame += GameController_StopGame;
+    }
+
+    private void GameController_StopGame()
+    {
+        isGaming = false;
+    }
+
+    private void GameController_StarGame()
+    {
+        isGaming = true;
     }
 
     public float getManage()
@@ -55,17 +67,15 @@ public class UIController : MonoBehaviour {
 
     public void onClickLeftButton()
     {
-        if (!touched)
+        if (!isGaming)
         {
             gameController.stopGame();
             startStop.text = "Start";
-            touched = true;
         }
-        else if (touched)
+        else if (isGaming)
         {
             gameController.startGame();
             startStop.text = "Stop";
-            touched = false;
         }
     }
 }

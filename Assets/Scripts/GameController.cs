@@ -15,6 +15,10 @@ public class GameController : MonoBehaviour {
     public Text score;
     public Text record;
 
+    public delegate void MethoodContainer();
+    public event MethoodContainer StarGame;
+    public event MethoodContainer StopGame;
+
     private int counter = 0;
     private float time;
     private float timer;
@@ -37,6 +41,8 @@ public class GameController : MonoBehaviour {
                 timer = time;
             }
         }
+        if (time > 0.5)
+            time -= 0.00001f;
     }
 
     private void OnValidate()
@@ -60,6 +66,7 @@ public class GameController : MonoBehaviour {
             changeRecord();
             startStop.text = "Start";
         }
+        StopGame();
     }
 
     public void startGame()
@@ -75,6 +82,7 @@ public class GameController : MonoBehaviour {
             startStop.text = "Stop";
             counter = 0;
         }
+        StarGame();
     }
 
     public float getTimer()

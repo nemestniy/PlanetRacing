@@ -6,6 +6,7 @@ public class MeteorController : MonoBehaviour {
 
     public float time;
     public StartConfig config;
+    public GameObject AfterCollision;
 
     private float timer;
     public bool destroy;
@@ -17,22 +18,14 @@ public class MeteorController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (destroy)
-        {
-            timer -= Time.deltaTime;
-            if(timer <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-	}
 
     void OnCollisionEnter(Collision col)
     {
         if(col.collider.name == "Planet")
         {
-            destroy = true;
+            var inst = Instantiate(AfterCollision, transform.position, Quaternion.identity) as GameObject;
+            inst.transform.LookAt(GameObject.Find("Planet").transform);
+            Destroy(gameObject);
         }
     }
 }

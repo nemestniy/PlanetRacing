@@ -6,7 +6,7 @@ public class GenerateMeteor : MonoBehaviour {
 
     public GameObject meteor;
     public StartConfig config;
-    public Transform placeOfGenerateMeteor;
+    public List <Transform> placesOfGenerateMeteor;
 
     public bool generate;
 
@@ -27,7 +27,10 @@ public class GenerateMeteor : MonoBehaviour {
             {
                 meteor.transform.position = new Vector3(randomRadius(15, 6), randomRadius(15, 6), randomRadius(15, 6));
                 Instantiate(meteor);
-                Instantiate(meteor, placeOfGenerateMeteor.position, Quaternion.identity);
+                foreach (Transform place in placesOfGenerateMeteor)
+                {
+                    Instantiate(meteor, place.position, Quaternion.identity);
+                }
                 timer = time;
             }
         }
