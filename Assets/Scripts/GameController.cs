@@ -16,8 +16,8 @@ public class GameController : MonoBehaviour {
     public Text record;
 
     public delegate void MethoodContainer();
-    public event MethoodContainer StarGame;
-    public event MethoodContainer StopGame;
+    public event MethoodContainer EventStarGame;
+    public event MethoodContainer EventStopGame;
 
     private int counter = 0;
     private float time;
@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour {
     private void Update()
     {
         score.text = "Score: " + counter;
-        if (generateMeteor.generate) {
+        if (generateMeteor.getGenerate()) {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
@@ -45,14 +45,14 @@ public class GameController : MonoBehaviour {
             time -= 0.00001f;
     }
 
-    private void OnValidate()
+    private void Awake()
     {
         player = GameObject.Find("Player");
         generateMeteor = GetComponent<GenerateMeteor>();
         playerController = player.GetComponent<PlayerController>();
     }
 
-    public void stopGame()
+    public void StopGame()
     {
         if (generateMeteor.getGenerate())
         {
@@ -61,28 +61,28 @@ public class GameController : MonoBehaviour {
             var meteors = GameObject.FindGameObjectsWithTag("Meteor");
             foreach (GameObject meteor in meteors)
                 Destroy(meteor);
-            generateMeteor.generate = false;
+            generateMeteor.SetGenerate(false);
             gameIsStopped.enabled = true;
             changeRecord();
             startStop.text = "Start";
         }
-        StopGame();
+        EventStopGame();
     }
 
-    public void startGame()
+    public void StartGame()
     {
         if (!generateMeteor.getGenerate())
         {
             playerController.speedMoving = config.speedMoving;
             playerController.speedRotation = config.speedRotation;
             player.transform.position = config.startPositionPlayer;
-            generateMeteor.generate = true;
+            generateMeteor.SetGenerate(true);
             gameIsStopped.enabled = false;
             showRecord();
             startStop.text = "Stop";
             counter = 0;
         }
-        StarGame();
+        EventStarGame();
     }
 
     public float getTimer()

@@ -8,7 +8,7 @@ public class GenerateMeteor : MonoBehaviour {
     public StartConfig config;
     public List <Transform> placesOfGenerateMeteor;
 
-    public bool generate;
+    private bool generate;
 
     public float time;
     private float timer;
@@ -17,6 +17,7 @@ public class GenerateMeteor : MonoBehaviour {
     {
         time = config.time;
         timer = time;
+        generate = true;
     }
 
     void Update() {
@@ -31,6 +32,8 @@ public class GenerateMeteor : MonoBehaviour {
                 {
                     Instantiate(meteor, place.position, Quaternion.identity);
                 }
+                if (time > 1)
+                    time -= 0.0001f;
                 timer = time;
             }
         }
@@ -52,5 +55,10 @@ public class GenerateMeteor : MonoBehaviour {
     public bool getGenerate()
     {
         return generate;
+    }
+
+    public void SetGenerate(bool value)
+    {
+        generate = value;
     }
 }

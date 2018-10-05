@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644577604156786}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 12.232687, y: 8.637489, z: 7.9434447}
+  m_LocalPosition: {x: -7.6301045, y: -13.06945, z: -10.326633}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4925432092319346}
@@ -92,7 +92,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7df04ac00b393ce4fad3390779a4a675, type: 3}
+  - {fileID: 2100000, guid: ccaac953848e0104888b71720aaebb2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,7 +207,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 0
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -264,7 +264,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 50
+  randomSeed: 0
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -756,7 +756,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 1
-    maxNumParticles: 100
+    maxNumParticles: 50
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4741,7 +4741,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6f5cd5fed5476e1409cd90c2a5a860df, type: 2}
+  - {fileID: 2100000, guid: 19569e02f8962a041b55fed9d5648eea, type: 2}
   - {fileID: 2100000, guid: 9184a304ce965ee48a649a9737a17d49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

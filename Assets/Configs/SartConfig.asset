@@ -15,5 +15,5 @@ MonoBehaviour:
   score: 0
   speedMoving: 1
   speedRotation: 0.5
-  time: 1
+  time: 1.5
   timeToDestroy: 3

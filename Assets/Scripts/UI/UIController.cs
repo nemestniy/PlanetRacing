@@ -19,8 +19,8 @@ public class UIController : MonoBehaviour {
     private void OnValidate()
     {
         gameController = GetComponent<GameController>();
-        gameController.StarGame += GameController_StarGame;
-        gameController.StopGame += GameController_StopGame;
+        gameController.EventStarGame += GameController_StarGame;
+        gameController.EventStopGame += GameController_StopGame;
     }
 
     private void GameController_StopGame()
@@ -67,14 +67,14 @@ public class UIController : MonoBehaviour {
 
     public void onClickLeftButton()
     {
-        if (!isGaming)
+        if (isGaming)
         {
-            gameController.stopGame();
+            gameController.StopGame();
             startStop.text = "Start";
         }
-        else if (isGaming)
+        else if (!isGaming)
         {
-            gameController.startGame();
+            gameController.StartGame();
             startStop.text = "Stop";
         }
     }

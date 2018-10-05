@@ -426,13 +426,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684257934}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: -0, y: 26.42, z: -0}
+  m_LocalRotation: {x: -0.59603554, y: -0.59603554, z: 0.38044927, w: -0.38044927}
+  m_LocalPosition: {x: 0, y: 33.5, z: 21.2}
   m_LocalScale: {x: 2, y: 1.6355519, z: 2.2897754}
   m_Children: []
   m_Father: {fileID: 897089100}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 180}
+  m_LocalEulerAnglesHint: {x: 65.100006, y: -179.99998, z: 90.00001}
 --- !u!81 &684257936
 AudioListener:
   m_ObjectHideFlags: 0
@@ -683,7 +683,6 @@ MonoBehaviour:
   placesOfGenerateMeteor:
   - {fileID: 673346703}
   - {fileID: 1725561887}
-  generate: 1
   time: 1
 --- !u!114 &780608877
 MonoBehaviour:

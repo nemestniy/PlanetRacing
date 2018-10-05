@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Meteor")
         {
-            gameController.stopGame();
+            gameController.StopGame();
         }
     }
 }
