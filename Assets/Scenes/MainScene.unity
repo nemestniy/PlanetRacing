@@ -189,7 +189,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 780608877}
-        m_MethodName: onClickLeftButton
+        m_MethodName: OnClickLeftButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -396,7 +396,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 673346702}
   m_LocalRotation: {x: -0, y: -0, z: -0.1318959, w: 0.9912636}
-  m_LocalPosition: {x: 13.9, y: -54.4, z: 0}
+  m_LocalPosition: {x: -2.1, y: -97.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897089100}
@@ -426,13 +426,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684257934}
-  m_LocalRotation: {x: -0.59603554, y: -0.59603554, z: 0.38044927, w: -0.38044927}
-  m_LocalPosition: {x: 0, y: 33.5, z: 21.2}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 0, y: 46.7, z: -0}
   m_LocalScale: {x: 2, y: 1.6355519, z: 2.2897754}
   m_Children: []
   m_Father: {fileID: 897089100}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 65.100006, y: -179.99998, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 180}
 --- !u!81 &684257936
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1143,13 +1143,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725561886}
-  m_LocalRotation: {x: 0.5050162, y: 0.4949331, z: -0.505016, w: 0.4949331}
-  m_LocalPosition: {x: 0.693, y: 22.87, z: 0}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 0, y: 46.7, z: -0}
   m_LocalScale: {x: 2, y: 1.6355519, z: 2.2897754}
   m_Children: []
   m_Father: {fileID: 897089100}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 91.155, y: -270.001, z: -0.0009765625}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 180}
 --- !u!1 &1799345530
 GameObject:
   m_ObjectHideFlags: 0

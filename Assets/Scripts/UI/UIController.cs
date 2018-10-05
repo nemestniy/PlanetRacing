@@ -51,7 +51,7 @@ public class UIController : MonoBehaviour {
         }
     }
 
-    public void onClickRightButton()
+    public void OnClickRightButton()
     {
         if (accelerating)
         {
@@ -65,17 +65,19 @@ public class UIController : MonoBehaviour {
         }
     }
 
-    public void onClickLeftButton()
+    public void OnClickLeftButton()
     {
         if (isGaming)
         {
             gameController.StopGame();
             startStop.text = "Start";
+            isGaming = false;
         }
         else if (!isGaming)
         {
             gameController.StartGame();
             startStop.text = "Stop";
+            isGaming = true;
         }
     }
 }

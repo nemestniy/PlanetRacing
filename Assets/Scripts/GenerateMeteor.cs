@@ -26,7 +26,7 @@ public class GenerateMeteor : MonoBehaviour {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                meteor.transform.position = new Vector3(randomRadius(15, 6), randomRadius(15, 6), randomRadius(15, 6));
+                meteor.transform.position = new Vector3(randomRadius(35, 15), randomRadius(35, 15), randomRadius(35, 15));
                 Instantiate(meteor);
                 foreach (Transform place in placesOfGenerateMeteor)
                 {
