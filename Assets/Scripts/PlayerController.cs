@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
-        float manage = uiController.getManage();
+        float manage = uiController.GetManage();
         moveDirection = new Vector3(speedMoving, 0, 0).normalized;
         transform.Rotate(Vector3.up, manage * speedRotation * 100 * Time.deltaTime, Space.Self);
     }

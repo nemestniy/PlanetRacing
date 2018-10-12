@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour {
 
     public GameController gameController;
 
-    private void OnValidate()
+    private void Awake()
     {
         gameController = GetComponent<GameController>();
         gameController.EventStarGame += GameController_StarGame;
@@ -33,7 +33,7 @@ public class UIController : MonoBehaviour {
         isGaming = true;
     }
 
-    public float getManage()
+    public float GetManage()
     {
         if (accelerating)
         {
